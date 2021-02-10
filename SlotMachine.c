@@ -14,7 +14,9 @@ Wishlist:
 
 void spin()
 {
-    //Assigns a symbol to each reel
+    srand(time(NULL));
+
+    int random = rand() % 12 + 1;
 }
 
 int result()
