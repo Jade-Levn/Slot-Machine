@@ -14,7 +14,13 @@ Wishlist:
 
 void spin()
 {
-    //Assigns a symbol to each reel
+    srand(time(NULL));
+
+    int random = rand() % 12 + 1;
+    //printf("The randomly generated value is %d.\n", random);
+    //Okay, what have I done wrong?
+    
+
 }
 
 int result()
@@ -29,5 +35,7 @@ int reward()
 
 int main()
 {
+    spin();
 
+    return 0;
 }
