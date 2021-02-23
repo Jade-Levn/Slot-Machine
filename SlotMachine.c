@@ -18,8 +18,7 @@ void spin()
 
     int random = rand() % 12 + 1;
     //printf("The randomly generated value is %d.\n", random);
-    //Okay, what have I done wrong?
-    
+    char reels[3][10];  //creating a character array of strings with a max length of 10
 
 }
 
