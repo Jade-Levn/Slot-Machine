@@ -23,7 +23,11 @@ void spin() //assigns reels "symbols"
     //This is for when the user input comes into play
     //When this works, user will input number between a range (number of reels)
     //Then the spins variable will be set to this value
-    int numberOfReels = 3; 
+    int numberOfReels = 0; 
+    
+    printf("Please enter a number between 1 and 9:\n");
+    scanf("%d", &numberOfReels);
+    printf("You have selected %d reel(s).\n", numberOfReels);
 
     int spins = numberOfReels;
 
@@ -44,6 +48,11 @@ void spin() //assigns reels "symbols"
             strcpy(reels[i], "horseshoe");
 
         }
+    }
+
+    for(int i =  0; i < spins; i++)
+    {
+        printf("%s\n", reels[i]);
     }
 }
 
