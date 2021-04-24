@@ -19,8 +19,13 @@ void spin()
     int random = rand() % 12 + 1;
     //printf("The randomly generated value is %d.\n", random);
     char reels[3][10];  //creating a character array of strings with a max length of 10
+    int spins = 3;
+    int numberOfReels = 0; //This is for when the user input comes into play
 
 }
+
+//check function that compares symbols on the reels to each other (no matter how many reels)
+//check(){}
 
 int result()
 {
