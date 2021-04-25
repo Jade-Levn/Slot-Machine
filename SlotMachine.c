@@ -18,19 +18,30 @@ void spin() //assigns reels "symbols"
 {
     srand(time(NULL));
 
-    int random = rand() % 12 + 1;
-    //printf("The randomly generated value is %d.\n", random);
-    
+    //My random number generator
+    int random = 0;
 
-    //This is for when the user input comes into play
-    //When this works, user will input number between a range (number of reels)
-    //Then the spins variable will be set to this value
+    //User will input number between the specifie range (number of reels)
     int numberOfReels = 0; 
 
     
     printf("Please enter a number between 1 and 9:\n");
     scanf("%d", &numberOfReels);
-    printf("You have selected %d reel(s).\n", numberOfReels);
+
+    //Validation checks
+    if(numberOfReels < 1 || numberOfReels > 9) {
+        printf("Invalid value. Please enter a number between 1 and 9.\n");
+        scanf("%d", &numberOfReels);
+
+    } /*else if(numberOfReels * 1 = NULL) {
+        printf("Not a number stupid.\n");
+        printf("Please enter a number between 1 and 9:\n");
+        scanf("%d", &numberOfReels);
+
+    }*/ //could potentially create a valid variable and do checks against that?
+    else {
+        printf("You have selected %d reel(s).\n", numberOfReels);
+    }
 
     char reels[numberOfReels][SYMBOL_LENGTH];  //This creates a character array to store the number of symbols needed
     int spins = numberOfReels;
@@ -38,8 +49,7 @@ void spin() //assigns reels "symbols"
     for(int i = 0; i < spins; i++)
     {
         int random = rand()%12 + 1;
-        if(random == 0 || random == 1 || random == 2 )
-        {
+        if(random == 0 || random == 1 || random == 2 ) {
             strcpy(reels[i], "bell");
 
         } else if(random == 3 || random == 4 || random == 5) {
@@ -54,9 +64,14 @@ void spin() //assigns reels "symbols"
         }
     }
 
-    for(int i =  0; i < spins; i++)
+    for(int i = 0; i < spins; i++)
     {
-        printf("%s\n", reels[i]);
+        printf("%s ", reels[i]);
+        // for(int j = 0; j < i; j++)
+        // {
+        //     printf("- ");
+        // }
+        
     }
 
     //To figure out error
