@@ -3,6 +3,8 @@
 #include <string.h>
 #include <time.h>
 
+#define SYMBOL_LENGTH 10
+
 /*
 Checklist:
 -Include at least 3 functions including main
@@ -18,17 +20,19 @@ void spin() //assigns reels "symbols"
 
     int random = rand() % 12 + 1;
     //printf("The randomly generated value is %d.\n", random);
-    char reels[3][10];  //creating a character array of strings with a max length of 10
+    
 
     //This is for when the user input comes into play
     //When this works, user will input number between a range (number of reels)
     //Then the spins variable will be set to this value
     int numberOfReels = 0; 
+
     
     printf("Please enter a number between 1 and 9:\n");
     scanf("%d", &numberOfReels);
     printf("You have selected %d reel(s).\n", numberOfReels);
 
+    char reels[numberOfReels][SYMBOL_LENGTH];  //This creates a character array to store the number of symbols needed
     int spins = numberOfReels;
 
     for(int i = 0; i < spins; i++)
@@ -54,6 +58,8 @@ void spin() //assigns reels "symbols"
     {
         printf("%s\n", reels[i]);
     }
+
+    //To figure out error
 }
 
 //check function that compares symbols on the reels to each other (no matter how many reels)
