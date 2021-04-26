@@ -45,6 +45,7 @@ void spin() //assigns reels "symbols"
 
     char reels[numberOfReels][SYMBOL_LENGTH];  //This creates a character array to store the number of symbols needed
     int spins = numberOfReels;
+    int separator = 0;
 
     for(int i = 0; i < spins; i++)
     {
@@ -64,18 +65,21 @@ void spin() //assigns reels "symbols"
         }
     }
 
+    separator = spins - 1;
+
     for(int i = 0; i < spins; i++)
     {
         printf("%s ", reels[i]);
-        // for(int j = 0; j < i; j++)
-        // {
-        //     printf("- ");
-        // }
-        
+        printf("- ");
     }
 
     //To figure out error
 }
+        // inner for
+        // for(int j = 0; j < i; j++)
+        // {
+        //     printf("- ");
+        // }
 
 //check function that compares symbols on the reels to each other (no matter how many reels)
 //check(){}
