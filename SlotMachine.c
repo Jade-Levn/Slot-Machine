@@ -97,7 +97,7 @@ int result()
             printf(" No Match ");
         }
 
-        
+        //why isn't this pushing?
     }
     int gameResult = 0;
     return gameResult;
