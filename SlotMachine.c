@@ -82,11 +82,25 @@ void spin() //assigns reels "symbols"
         // }
 
 //check function that compares symbols on the reels to each other (no matter how many reels)
-//check(){}
 
 int result()
 {
-    //Returns the result of the spin
+    spin();
+    for(int i = 0; i < spins; i++)
+    {
+        strcmp(reels[i], reels[i+1]);
+        if(reels[i] == reels[i+1])
+        {
+            printf(" Matched ");
+        } else 
+        {
+            printf(" No Match ");
+        }
+
+        
+    }
+    int gameResult = 0;
+    return gameResult;
 }
 
 int reward()
