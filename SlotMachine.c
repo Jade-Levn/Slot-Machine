@@ -21,14 +21,15 @@ void spin() //assigns reels "symbols"
     //My random number generator
     int random = 0;
 
-    //User will input number between the specifie range (number of reels)
+    //User will input number between the specific range (number of reels)
     int numberOfReels = 0; 
 
     
-    printf("Please enter a number between 1 and 9:\n");
+    printf("Please enter a number between 1 and 9:\n"); //Getting user input is fine
     scanf("%d", &numberOfReels);
 
     //Validation checks
+    //still need to work on rejecting non-numerical inputs
     if(numberOfReels < 1 || numberOfReels > 9) {
         printf("Invalid value. Please enter a number between 1 and 9.\n");
         scanf("%d", &numberOfReels);
@@ -110,7 +111,7 @@ int reward()
 
 int main()
 {
-    spin();
+    //spin();
 
     return 0;
 }
