@@ -30,19 +30,20 @@ void spin() //assigns reels "symbols"
 
     //Validation checks
     //still need to work on rejecting non-numerical inputs
-    if(numberOfReels < 1 || numberOfReels > 9) {
-        printf("Invalid value. Please enter a number between 1 and 9.\n");
-        scanf("%d", &numberOfReels);
+    // if(numberOfReels < 1 || numberOfReels > 9) 
+    // {
+    //     printf("Invalid value. Please enter a number between 1 and 9.\n");
+    //     scanf("%d", &numberOfReels);
 
-    } /*else if(numberOfReels * 1 = NULL) {
-        printf("Not a number stupid.\n");
-        printf("Please enter a number between 1 and 9:\n");
-        scanf("%d", &numberOfReels);
+    // } /*else if(numberOfReels * 1 = NULL) {
+    //     printf("Not a number stupid.\n");
+    //     printf("Please enter a number between 1 and 9:\n");
+    //     scanf("%d", &numberOfReels);
 
-    }*/ //could potentially create a valid variable and do checks against that?
-    else {
-        printf("You have selected %d reel(s).\n", numberOfReels);
-    }
+    // }*/ //could potentially create a valid variable and do checks against that?
+    // else {
+    //     printf("You have selected %d reel(s).\n", numberOfReels);
+    // }
 
     char reels[numberOfReels][SYMBOL_LENGTH];  //This creates a character array to store the number of symbols needed
     int spins = numberOfReels;
@@ -71,11 +72,15 @@ void spin() //assigns reels "symbols"
     for(int i = 0; i < spins; i++)
     {
         printf("%s ", reels[i]);
-        printf("- ");
+        for(int j = i + 1; j < spins; j++)
+        {
+            printf("- ");
+        }
+        
     }
 
     //To figure out error
-}
+
         // inner for
         // for(int j = 0; j < i; j++)
         // {
@@ -83,8 +88,9 @@ void spin() //assigns reels "symbols"
         // }
 
 //check function that compares symbols on the reels to each other (no matter how many reels)
+}
 
-int result()
+int result(char numReels[userNum][SYMBOL_LENGTH])
 {
     spin();
     for(int i = 0; i < spins; i++)
