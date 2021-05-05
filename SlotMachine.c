@@ -90,25 +90,25 @@ void spin() //assigns reels "symbols"
 //check function that compares symbols on the reels to each other (no matter how many reels)
 }
 
-int result(char numReels[userNum][SYMBOL_LENGTH])
-{
-    spin();
-    for(int i = 0; i < spins; i++)
-    {
-        strcmp(reels[i], reels[i+1]);
-        if(reels[i] == reels[i+1])
-        {
-            printf(" Matched ");
-        } else 
-        {
-            printf(" No Match ");
-        }
+// int result(char numReels[userNum][SYMBOL_LENGTH])
+// {
+//     spin();
+//     for(int i = 0; i < spins; i++)
+//     {
+//         strcmp(reels[i], reels[i+1]);
+//         if(reels[i] == reels[i+1])
+//         {
+//             printf(" Matched ");
+//         } else 
+//         {
+//             printf(" No Match ");
+//         }
 
-        //why isn't this pushing?
-    }
-    int gameResult = 0;
-    return gameResult;
-}
+//         //why isn't this pushing?
+//     }
+//     int gameResult = 0;
+//     return gameResult;
+// }
 
 int reward()
 {
@@ -117,7 +117,7 @@ int reward()
 
 int main()
 {
-    //spin();
+    printf("%s\n", spin());
 
     return 0;
 }
